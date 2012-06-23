@@ -1,4 +1,4 @@
-== Welcome to Rails
+== Welcome to David Ziegler's Project Site
 
 Nothing too interesting here yet.  I'm just to assemble it.
 
