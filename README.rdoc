@@ -1,6 +1,6 @@
 == Welcome to David Ziegler's Project Site
 
-Nothing too interesting here yet.  I'm just to assemble it.
+Nothing too interesting here yet.  I'm just to begining to assemble it.  The live site is hosted on amazon at http://www.dziegler.com.
 
 But eventually it will a few little things I've been working on:  
 
