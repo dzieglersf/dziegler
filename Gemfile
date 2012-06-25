@@ -1,9 +1,18 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+gem 'rubber'
+gem 'mysql'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
+
+
+# Heroku deployment requirements
+group :production do
+#  gem 'therubyracer-heroku'
+end
+
 
 group :development do
 	gem 'sqlite3'
@@ -26,13 +35,7 @@ gem 'modernizr-rails'
 # gem 'blueprint-rails'
 
 # Ajax request CoffeeScript support
-# gem 'coffeebeans'
-
-# Heroku deployment requirements
-group :production do
-#  gem 'therubyracer-heroku'
-  gem 'pg'
-end
+gem 'coffeebeans'
 
 
 # To use ActiveModel has_secure_password
