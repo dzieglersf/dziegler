@@ -1,4 +1,4 @@
-set :application, "dziegler.com"
+set :application, "dziegler"
 set :repository,  "git://github.com/dzieglersf/dziegler.git"
 
 set :scm, :git
