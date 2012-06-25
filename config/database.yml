@@ -20,7 +20,7 @@ test:
 
 production:
   adapter: mysql
-  database: db/test
+  database: test
   username: root
   password: bitnami
   pool: 5
