@@ -25,7 +25,8 @@ after "deploy:bundle_gems", "deploy:restart"
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
 	task :bundle_gems do
-		run "cd #{deploy_to}/current && bundle install"
+		run "cd #{deploy_to}/current"
+		run "bundle install"
 	end
   task :start do ; end
   task :stop do ; end
