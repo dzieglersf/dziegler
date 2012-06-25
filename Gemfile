@@ -11,7 +11,7 @@ gem 'therubyracer-heroku'
 
 # Heroku deployment requirements
 group :production do
-	gem 'sqlite3'
+	gem 'pg'
 end
 
 
