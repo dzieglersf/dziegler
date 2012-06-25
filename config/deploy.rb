@@ -1,4 +1,4 @@
-set :application, "dziegler.com"
+set :application, "dziegler"
 set :repository,  "git://github.com/dzieglersf/dziegler.git"
 
 set :scm, :git
@@ -26,7 +26,7 @@ after "deploy:bundle_gems", "deploy:restart"
 namespace :deploy do
 	task :bundle_gems do
 		run "cd #{deploy_to}/current"
-		run "bundle install"
+#		run "bundle install"
 	end
   task :start do ; end
   task :stop do ; end
