@@ -1,7 +1,9 @@
 Dziegler::Application.routes.draw do
 
   root to: 'pages#home'
-  
+
+  match '/flyingbirds', to: 'flyingbirds#birds'
+  match '/aroundcage', to: 'flyingbirds#aroundcage'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
