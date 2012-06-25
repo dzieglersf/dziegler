@@ -86,8 +86,8 @@ function Bird( name, start_point, speed, init_angle )
 	var face_right_image = [];
 	var face_left_image = [];
 	for (i=0; i<4; i++) {
-		face_right_image[i] = paper.image('img/right_bird' + i + '.png', 9999, 9999, 40, 40);
-		face_left_image[i] = paper.image('img/left_bird' + i + '.png', 9999, 9999, 40, 40);
+		face_right_image[i] = paper.image('../images/right_bird' + i + '.png', 9999, 9999, 40, 40);
+		face_left_image[i] = paper.image('../images/left_bird' + i + '.png', 9999, 9999, 40, 40);
 	};
 	
 	var oriented_image_sets = [face_right_image, face_left_image];
