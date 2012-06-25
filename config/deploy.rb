@@ -21,14 +21,14 @@ role :db,  "23.21.146.77", :primary => true # This is where Rails migrations wil
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
 
-after "deploy", "deploy:bundle_gems"
-after "deploy:bundle_gems", "deploy:restart"
+# after "deploy", "deploy:bundle_gems"
+# after "deploy:bundle_gems", "deploy:restart"
 
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
-	task :bundle_gems do
-		run "cd #{deploy_to}/current"
-	end
+	# task :bundle_gems do
+	# 	run "cd #{deploy_to}/current"
+	# end
   task :start do ; end
   task :stop do ; end
   task :restart, :roles => :app, :except => { :no_release => true } do
