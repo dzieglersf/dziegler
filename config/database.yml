@@ -23,4 +23,4 @@ production:
   database: db/test
   pool: 5
   timeout: 5000
-  socket: /var/lib/mysql/mysql.sock
+  socket: /home/bitnami/stack/mysql/tmp/mysql.sock
