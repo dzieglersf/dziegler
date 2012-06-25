@@ -21,8 +21,8 @@ test:
 production:
   adapter: mysql
   database: db/test
-  username: bitnami
-  password: 
+  username: root
+  password: bitnami
   pool: 5
   timeout: 5000
   socket: /home/bitnami/stack/mysql/tmp/mysql.sock
