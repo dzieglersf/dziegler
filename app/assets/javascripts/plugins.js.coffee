@@ -15,6 +15,3 @@ window.log = ->
   while a = d.pop()
     b[a] = b[a] or c
 ) window.console = window.console or {}
-
-# place any jQuery/helper plugins in here, instead of separate, slower script files.
-
