@@ -1,3 +1,5 @@
+require 'bundler/capistrano'
+
 set :application, "dziegler"
 set :repository,  "git://github.com/dzieglersf/dziegler.git"
 
@@ -25,8 +27,7 @@ after "deploy:bundle_gems", "deploy:restart"
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
 	task :bundle_gems do
-		run "cd #{deploy_to}/current"
-#		run "bundle install"
+		run "cd #{deploy_to}/current && bundle install --deployment"
 	end
   task :start do ; end
   task :stop do ; end

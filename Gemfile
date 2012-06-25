@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
-gem 'rubber'
-gem 'mysql'
 gem 'therubyracer-heroku'
 
 # Bundle edge Rails instead:
@@ -11,12 +9,13 @@ gem 'therubyracer-heroku'
 
 # Heroku deployment requirements
 group :production do
-#  
+	gem 'mysql'
 end
 
 
 group :development do
 	gem 'sqlite3'
+	gem 'capistrano'
 end
 
 # Gems used only for assets and not required
