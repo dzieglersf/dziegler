@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 gem 'rubber'
-gem 'mysql'
+# gem 'mysql'
 gem 'therubyracer-heroku'
 
 # Bundle edge Rails instead:
@@ -11,7 +11,7 @@ gem 'therubyracer-heroku'
 
 # Heroku deployment requirements
 group :production do
-#  
+	gem 'pg'
 end
 
 
