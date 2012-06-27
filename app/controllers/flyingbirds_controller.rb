@@ -1,7 +1,13 @@
 class FlyingbirdsController < ApplicationController
-	def birds
+	def index
 	end
 
 	def aroundcage
 	end
+
+	def totree
+	end
+
+	
 end
+

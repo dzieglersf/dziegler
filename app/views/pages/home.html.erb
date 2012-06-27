@@ -5,4 +5,6 @@
 	<h2>Welcome.  Here are a few projects that I have been working on.  Feel free to look around and play with what you find interesting.</h2>
 </div>
 
-<%= link_to "Who I am", "http://www.linkedin.com/in/dzieglersf" %>
+<ul>
+	<li><%= link_to "Let's go look at the birds!", { :controller => "flyingbirds", :action => "index" }, class: "btn btn-large btn-primary" %>	</li>
+	<li><%= link_to "Who I am", "http://www.linkedin.com/in/dzieglersf", class: "btn btn-large btn-primary" %></li>
