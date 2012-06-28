@@ -3,9 +3,10 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $ ->
-  $('#totree').click -> 
-  	flytotree()
+	$('#aroundcage').click (e) ->
+		e.preventDefault()
+		flyaroundcage()
 
-  $('#aroundcage').click ->
-  	flyaroundcage()
-
+	$('#totree').click (e) ->
+		e.preventDefault()
+		flytotree()

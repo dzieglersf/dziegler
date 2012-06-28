@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
@@ -28,20 +29,20 @@
        For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
   
   <%= csrf_meta_tag %>
-	<%= render 'layouts/shim' %>
+  <%= render 'layouts/shim' %>
 </head>
 <body>
 
-	<%= render 'layouts/header' %>
-	<% flash.each do |key, value| %>
-		<%= content_tag(:div, value, class: "alert alert-key-#{key}") %>
-	<% end %>
+  <%= render 'layouts/header' %>
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: "alert alert-key-#{key}") %>
+  <% end %>
   
-	<div class="container">
-		<%= yield %>
-		<%= render 'layouts/footer' %>
-		<%= debug(params) if Rails.env.development? %>
-	</div>
+  <div class="container">
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
+  </div>
 
   <%= javascript_include_tag "application" %>
 
