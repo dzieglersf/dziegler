@@ -1,28 +1,24 @@
-// actions.js
-
 flyaroundcage = function() {	
 	
-var canvas = $('#raphael_canvas')
-
 	var window_width = $(window).width();
 	var window_height = $(window).height();
 
-	var paper = Raphael(0, 0, window_width, $(window).height());
+	var paper = Raphael(0,0, window_width, window_height);
 
 	//BACKGROUND
-	var sky = paper.rect(0,0,window_width, $(window).height());
+	var sky = paper.rect(0,0,window_width, window_height);
 	sky.attr("fill", "#B9B1BF");
 
 	// CAGE
-	var NUMBER_OF_VERTICAL_BARS = 12;
+	var NUMBER_OF_VERTICAL_BARS = 2;
 	var NUMBER_OF_HORIZONTAL_BARS = 8
 	var space_between_vertical_bars = window_width / NUMBER_OF_VERTICAL_BARS;
-	var space_between_horizontal_bars = $(window).height() / NUMBER_OF_HORIZONTAL_BARS;
+	var space_between_horizontal_bars = window_height / NUMBER_OF_HORIZONTAL_BARS;
 	var BAR_THICKNESS = 4;
 	var BAR_COLOR = "#FFD700"
 
 	for (i=0; i<NUMBER_OF_VERTICAL_BARS; i++) {
-		var bar = paper.rect(i*space_between_vertical_bars, 0, BAR_THICKNESS, $(window).height());
+		var bar = paper.rect(i*space_between_vertical_bars, 0, BAR_THICKNESS, window_height);
 		bar.attr("fill", BAR_COLOR);
 	}
 
@@ -99,7 +95,7 @@ var canvas = $('#raphael_canvas')
 			}
 
 			if ( this.vertical_direction == VERTICAL_DIRECTION.DOWN ) {
-				if ( this.y < ( $(window).height() - 30 ) ) {
+				if ( this.y < ( window_height - 30 ) ) {
 					this.y = this.y + Math.abs( this.velocity.y ) * dt; 
 				}
 				else {
@@ -153,7 +149,7 @@ flytotree = function() {
 	var window_width = $(window).width();
 	var window_height = $(window).height();
 
-	var paper = Raphael(0,0, window_width, $(window).height());
+	var paper = Raphael(0,0, window_width, window_height);
 
 	//SCENERY
 	var sky = paper.rect(0,0,window_width, window_height);
