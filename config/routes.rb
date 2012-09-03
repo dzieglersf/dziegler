@@ -1,5 +1,7 @@
 Dziegler::Application.routes.draw do
 
+  get "blog/index"
+
   root to: 'pages#home'
   resources :flyingbirds
 
