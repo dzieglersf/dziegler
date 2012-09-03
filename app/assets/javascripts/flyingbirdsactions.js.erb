@@ -1,16 +1,18 @@
+var DISTANCE_FROM_TOP = 200;
+
 flyaroundcage = function() {	
 	
 	var window_width = $(window).width();
 	var window_height = $(window).height();
 
-	var paper = Raphael(0,0, window_width, window_height);
+	var paper = Raphael(0, DISTANCE_FROM_TOP, window_width, window_height - DISTANCE_FROM_TOP);
 
 	//BACKGROUND
 	var sky = paper.rect(0,0,window_width, window_height);
 	sky.attr("fill", "#B9B1BF");
 
 	// CAGE
-	var NUMBER_OF_VERTICAL_BARS = 2;
+	var NUMBER_OF_VERTICAL_BARS = 12;
 	var NUMBER_OF_HORIZONTAL_BARS = 8
 	var space_between_vertical_bars = window_width / NUMBER_OF_VERTICAL_BARS;
 	var space_between_horizontal_bars = window_height / NUMBER_OF_HORIZONTAL_BARS;
@@ -147,9 +149,9 @@ flytotree = function() {
 	//var canvas = $('div#raphael_canvas');
 
 	var window_width = $(window).width();
-	var window_height = $(window).height();
+	var window_height = $(window).height() - DISTANCE_FROM_TOP;
 
-	var paper = Raphael(0,0, window_width, window_height);
+	var paper = Raphael(0, DISTANCE_FROM_TOP, window_width, window_height);
 
 	//SCENERY
 	var sky = paper.rect(0,0,window_width, window_height);
