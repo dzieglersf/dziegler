@@ -1,4 +1,5 @@
 class BlogController < ApplicationController
+  
   def index
   	@blog = Blog.new
   	post1 = @blog.new_post
