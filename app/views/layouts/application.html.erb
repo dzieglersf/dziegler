@@ -40,21 +40,21 @@
   
   <div class="container">
     <div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <a class="brand" href="#">David Ziegler</a>
-    <ul class="nav">
-      <li class="divider-vertical"></li>
-      <li class="active"><a href="#">Home</a></li>
-      <li class="divider-vertical"></li>
-      <li><a href="#">Birds</a></li>
-      <li><a href="#">Resume</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">13 Ways of Looking at a Ziegler</a></li>
-      <li><a href="#">Rubik's Cube</a></li>
-      <li><a href="#"></a></li>
-    </ul>
-  </div>
-</div>
+      <div class="navbar-inner">
+        <a class="brand" href="#">David Ziegler</a>
+        <ul class="nav">
+          <li class="divider-vertical"></li>
+          <li class="active"><%= link_to "Home", :root %></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to "Birds", :flyingbirds %></li>
+          <li><%= link_to "Resume", "http://www.linkedin.com/in/dzieglersf" %></li>
+          <li><%= link_to "Blog", :blog_root %></li>
+          <li><a href="#">13 Ways of Looking at a Ziegler</a></li>
+          <li><a href="#">Rubik's Cube</a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
+    </div>
     <%= yield %>
     <%= render 'layouts/footer' %>
     <%= debug(params) if Rails.env.development? %>
