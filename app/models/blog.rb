@@ -1,6 +1,6 @@
 class Blog
-	attr_reader :entries
 	attr_writer :post_source
+	# attr_reader :entries
 
 	def initialize
 		@entries = []
@@ -14,6 +14,10 @@ class Blog
 		"Where David records his thoughts"
 	end
 
+	def entries
+		@entries.sort_by{|e| e.pubdate}.reverse.take(10)
+	end
+
 	def new_post(*args)
 		post_source.call(*args).tap do |p|
 			p.blog = self
@@ -21,12 +25,12 @@ class Blog
 	end
 
 	def add_entry(entry)
-		entries << entry
+		@entries << entry
 	end
 
 	private
 	def post_source
-		@post_source ||= Post.public_method(:new)
+		@post_source ||= Post.public_method(:new) # setter injection
 	end
 
 end
