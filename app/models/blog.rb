@@ -11,7 +11,7 @@ class Blog
 	end
 
 	def subtitle
-		"Where David records his thoughts"
+		"A refuge from the goading urgency of contingent happenings."
 	end
 
 	def entries
