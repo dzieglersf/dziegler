@@ -3,9 +3,12 @@ Dziegler::Application.routes.draw do
   get "blog/index", :as => :blog_root
 
   root to: 'pages#home'
+
   resources :flyingbirds
   resources :posts
   resources :blog
+
+  match '/notdone', to: 'pages#not_done'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
