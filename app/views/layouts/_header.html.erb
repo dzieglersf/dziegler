@@ -5,8 +5,14 @@
       <li class="divider-vertical"></li>
       <li class="active"><%= link_to "Home", :root %></li>
       <li class="divider-vertical"></li>
+      <li class="dropdown" id="me-menu">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Me<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Resume ", "https://s3.amazonaws.com/dziegler_docs/Resume.pdf" %></li>
+            <li><%= link_to "LinkedIn Profile", "http://www.linkedin.com/in/dzieglersf" %></li>
+          </ul>
+        </li>
       <li><%= link_to "Birds", :flyingbirds %></li>
-      <li><%= link_to "Resume", "http://www.linkedin.com/in/dzieglersf" %></li>
       <li><%= link_to "Blog", :blog_root %></li>
       <li><%= link_to "Rubik's Cube" ,:notdone %></li>
       <li class="dropdown" id="thirteen-menu">
